@@ -23,6 +23,10 @@ module.exports = {
       {
         test: /\.css$/,
         loader: 'null'
+      },
+      {
+        test: /\.scss$/,
+        loader: 'null'
       }
     ]
   }

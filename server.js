@@ -21,7 +21,8 @@ http.createServer( function(req, res) {
 		".txt": "text/plain",
 		".jpg": "image/jpeg",
 		".gif": "image/gif",
-		".png": "image/png"
+		".png": "image/png",
+		".map": "text/plain"
 	};
 	var isValidExt = validExtensions[ext];
 
