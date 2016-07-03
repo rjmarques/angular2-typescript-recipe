@@ -1,0 +1,44 @@
+@import '../../../../public/scss/globals';
+
+.header {
+    background-color: #f8f8f8;
+    padding: 0px $sideSpace;
+    display: flex;
+
+    .brand-name {
+        flex: 0 0 auto;
+        padding: 20px;
+        padding-left: 0px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .top-navigation {
+        display: flex;
+
+        a {
+            text-transform: capitalize;
+            text-decoration: none;
+            padding: 20px 10px;
+            cursor: pointer;
+
+            &:link {
+                color: appGrey; 
+            }
+
+            &.active {
+               border-bottom: 5px solid #c7c7c7;
+               padding-bottom: 15px;
+            }
+
+            &:hover {
+            	background-color: #e7e7e7;
+                color: $appGrey;
+            }
+
+            &:visited { 
+                color: $appGrey;
+            }
+        }
+    }
+}

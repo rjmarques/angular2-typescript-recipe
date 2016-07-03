@@ -1,4 +1,18 @@
+@import 'globals';
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  background-repeat: no-repeat !important;
+  min-width: 0px;
+  min-height: 0px;
+}
+
 body {
-    background: #0147A7;
-    color: #fff;
+    color: $appGrey;
+    margin: 0px;
+    padding: 0px;
 }
