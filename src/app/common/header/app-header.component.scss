@@ -23,7 +23,7 @@
             cursor: pointer;
 
             &:link {
-                color: appGrey; 
+                color: $appGrey; 
             }
 
             &.active {

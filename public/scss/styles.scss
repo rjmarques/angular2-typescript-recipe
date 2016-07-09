@@ -15,4 +15,13 @@ body {
     color: $appGrey;
     margin: 0px;
     padding: 0px;
+
+    .main-content {
+      margin: 30px $sideSpace;
+
+      .header {
+          font-size: 18pt;
+          text-transform: capitalize;        
+      }
+    }
 }

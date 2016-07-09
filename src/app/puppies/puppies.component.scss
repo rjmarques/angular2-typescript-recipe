@@ -1,24 +1,13 @@
-@import '../../../public/scss/globals';
-
-.content {
-    margin: 30px $sideSpace;
-
-    .header {
-        font-size: 18pt;
-        text-transform: capitalize;        
+.description {
+    span.source {
+	    font-size: 9pt;
+	    font-style: italic;
     }
+}
 
-    .description {
-        span.source {
-            font-size: 9pt;
-            font-style: italic;
-        }
-    }
-
-    .gallery {
-        img {
-            max-width: 400px;
-            max-height: 400px;
-        }
+.gallery {
+    img {
+        max-width: 400px;
+        max-height: 400px;
     }
 }
