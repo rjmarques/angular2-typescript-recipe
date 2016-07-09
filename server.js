@@ -11,7 +11,11 @@ http.createServer( function(req, res) {
 
 	var now = new Date();
 
-	var filename = req.url || "index.html";
+	var filename = req.url || "/index.html";
+	if(filename == "/") {
+		filename = "/index.html";
+	}
+
 	var ext = path.extname(filename);
 	var localPath = __dirname + "/dist";
 	var validExtensions = {
