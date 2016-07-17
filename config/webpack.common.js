@@ -41,12 +41,12 @@ module.exports = {
       {
         test: /\.scss$/,
         exclude: helpers.root('src', 'app'),
-        loader: ExtractTextPlugin.extract('style', 'css?sourceMap!sass?sourceMap')
+        loader: ExtractTextPlugin.extract('style', 'css?sourceMap!resolve-url!sass?sourceMap')
       },
-      {
+      { 
         test: /\.scss$/,
         include: helpers.root('src', 'app'),
-        loader: 'raw-loader!sass-loader'
+        loaders: ['exports-loader?module.exports.toString()', 'css', 'sass']
       }
     ]
   },

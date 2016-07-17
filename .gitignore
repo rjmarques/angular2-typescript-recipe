@@ -10,6 +10,7 @@ __pycache__/
 
 # Ignore Node Modules
 node_modules
+npm-debug.log
 
 # Ignore Typescript typings
 typings
