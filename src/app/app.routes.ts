@@ -1,7 +1,8 @@
 import { provideRouter, RouterConfig }  from '@angular/router';
-import { PuppiesComponent } from './puppies/puppies.component';
-import { OttersComponent } from './otters/otters.component';
-import { KittensComponent } from './kittens/kittens.component';
+
+import { PuppiesComponent } from './puppies';
+import { OttersComponent } from './otters';
+import { KittensComponent } from './kittens';
 
 const routes: RouterConfig = [  
   {
