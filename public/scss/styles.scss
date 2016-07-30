@@ -1,27 +1,27 @@
 @import 'globals';
 
 html {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 *, *:before, *:after {
-  box-sizing: inherit;
-  background-repeat: no-repeat !important;
-  min-width: 0px;
-  min-height: 0px;
+	box-sizing: inherit;
+	background-repeat: no-repeat !important;
+	min-width: 0px;
+	min-height: 0px;
 }
 
 body {
-    color: $appGrey;
-    margin: 0px;
-    padding: 0px;
+		color: $appGrey;
+		margin: 0px;
+		padding: 0px;
 
-    .main-content {
-      margin: 30px $sideSpace;
+		.main-content {
+			margin: 30px $sideSpace;
 
-      .header {
-          font-size: 18pt;
-          text-transform: capitalize;        
-      }
-    }
+			.header {
+					font-size: 18pt;
+					text-transform: capitalize;				
+			}
+		}
 }
