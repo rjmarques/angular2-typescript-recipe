@@ -2,6 +2,8 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var helpers = require('./helpers');
+var precss = require('precss');
+var autoprefixer = require('autoprefixer')
 
 module.exports = {
 	entry: {
@@ -31,22 +33,22 @@ module.exports = {
 			{
 				test: /\.css$/,
 				exclude: helpers.root('src', 'app'),
-				loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
+				loader: ExtractTextPlugin.extract('style', 'css?sourceMap!postcss')
 			},
 			{
 				test: /\.css$/,
 				include: helpers.root('src', 'app'),
-				loader: 'raw'
+				loader: 'raw!postcss'
 			},
 			{
 				test: /\.scss$/,
 				exclude: helpers.root('src', 'app'),
-				loader: ExtractTextPlugin.extract('style', 'css?sourceMap!resolve-url!sass?sourceMap')
+				loader: ExtractTextPlugin.extract('style', 'css?sourceMap!postcss!resolve-url!sass?sourceMap')
 			},
 			{ 
 				test: /\.scss$/,
 				include: helpers.root('src', 'app'),
-				loaders: ['exports-loader?module.exports.toString()', 'css', 'sass']
+				loaders: ['exports-loader?module.exports.toString()', 'css', 'postcss', 'sass']
 			}
 		]
 	},
@@ -59,5 +61,9 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: 'src/index.html'
 		})
-	]
+	],
+
+    postcss: function () {
+        return [precss, autoprefixer({ browsers: ['last 2 versions'] })];
+    }
 };
