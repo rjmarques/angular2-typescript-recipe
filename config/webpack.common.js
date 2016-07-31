@@ -32,12 +32,12 @@ module.exports = {
 			},
 			{
 				test: /\.css$/,
-				exclude: helpers.root('app'),
+				exclude: helpers.root('src', 'app'),
 				loader: ExtractTextPlugin.extract('style', 'css?sourceMap!postcss')
 			},
 			{
 				test: /\.css$/,
-				include: helpers.root('app'),
+				include: helpers.root('src', 'app'),
 				loader: 'raw!postcss'
 			},
 			{

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
-import '../shared/scss/styles.scss';
+import '../../public/scss/styles.scss';
 
 import { AppHeaderComponent } from './shared/header/app-header.component.ts';
 
