@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ROUTER_DIRECTIVES } from '@angular/router';
 import '../../public/scss/styles.scss';
 
 import { AppHeaderComponent } from './shared/header/app-header.component.ts';
@@ -8,7 +7,7 @@ import { AppHeaderComponent } from './shared/header/app-header.component.ts';
 	selector: 'recipe-app',
 	template: require('./app.component.html'),
 	styles: [require('./app.component.scss')],
-	directives: [ ROUTER_DIRECTIVES, AppHeaderComponent ]
+	directives: [ AppHeaderComponent ]
 })
 
 export class AppComponent { }

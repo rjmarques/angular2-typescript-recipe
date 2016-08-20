@@ -1,10 +1,10 @@
-import { provideRouter, RouterConfig } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
 import { PuppiesComponent } from './puppies';
 import { OttersComponent } from './otters';
 import { KittensComponent } from './kittens';
 
-const routes: RouterConfig = [
+const appRoutes: Routes = [
 	{
 		path: 'puppies',
 		component: PuppiesComponent
@@ -24,6 +24,4 @@ const routes: RouterConfig = [
 	}
 ];
 
-export const APP_ROUTER_PROVIDERS = [
-	provideRouter(routes)
-];
+export const routing = RouterModule.forRoot(appRoutes);

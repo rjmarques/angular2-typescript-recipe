@@ -21,7 +21,9 @@ module.exports = webpackMerge(commonConfig, {
 	plugins: [
 		new webpack.NoErrorsPlugin(),
 		new webpack.optimize.DedupePlugin(),
-		new webpack.optimize.UglifyJsPlugin(),
+		new webpack.optimize.UglifyJsPlugin({
+			mangle: { screw_ie8 : true, keep_fnames: true} // current bug in RC5, should be removed later!
+		}),
 		new ExtractTextPlugin('[name].[hash].css'),
 		new webpack.DefinePlugin({
 			'process.env': {

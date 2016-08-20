@@ -1,5 +1,7 @@
+var helpers = require('./helpers');
+
 module.exports = {
-	devtool: 'inline-source-map',
+	devtool: 'source-map',
 
 	resolve: {
 		extensions: ['', '.ts', '.js']
@@ -9,7 +11,7 @@ module.exports = {
 		loaders: [
 			{
 				test: /\.ts$/,
-				loader: 'ts'
+				loaders: ['ts', 'angular2-template-loader']
 			},
 			{
 				test: /\.html$/,
@@ -22,11 +24,23 @@ module.exports = {
 			},
 			{
 				test: /\.css$/,
+				exclude: helpers.root('src', 'app'),
 				loader: 'null'
-			},
+	  		},
+	  		{
+				test: /\.css$/,
+				include: helpers.root('src', 'app'),
+				loader: 'raw!postcss'
+	  		},
 			{
 				test: /\.scss$/,
+				exclude: helpers.root('src', 'app'),
 				loader: 'null'
+			},
+			{ 
+				test: /\.scss$/,
+				include: helpers.root('src', 'app'),
+				loaders: ['exports-loader?module.exports.toString()', 'css', 'postcss', 'sass']
 			}
 		]
 	}
