@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import '../../public/scss/styles.scss';
 
-import { AppHeaderComponent } from './shared/header/app-header.component.ts';
+import { AppHeaderComponent } from './shared';
+import '../../public/scss/styles.scss';
 
 @Component({
 	selector: 'recipe-app',
