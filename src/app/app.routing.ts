@@ -1,27 +1,9 @@
-import { Routes, RouterModule } from '@angular/router';
+import { ModuleWithProviders }   from '@angular/core';
+import { Routes, RouterModule }  from '@angular/router';
 
-import { PuppiesComponent } from './puppies';
-import { OttersComponent } from './otters';
-import { KittensComponent } from './kittens';
+// no general routes
+const appRoutes: Routes = [];
 
-const appRoutes: Routes = [
-	{
-		path: 'puppies',
-		component: PuppiesComponent
-	},
-	{
-		path: 'otters',
-		component: OttersComponent
-	},
-	{
-		path: 'kittens',
-		component: KittensComponent
-	},
-	{
-		path: '',
-		redirectTo: '/puppies',
-		pathMatch: 'full'
-	}
-];
+export const appRoutingProviders: any[] = [];
 
-export const routing = RouterModule.forRoot(appRoutes);
+export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
