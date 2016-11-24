@@ -1,6 +1,6 @@
 # Angular 2 & Typescript Recipe
 
-This project is aims to provide a base structure for a web project. It is not meant as a tutorial of any kind, but instead to remove initial boilderplate build definition concerns. Thus, provinding a pre-defined and robust build structure upon which multiple developers can work on to build something great!
+This project aims to provide a base structure for a web project. It is not meant as a tutorial of any kind, but instead to remove initial boilderplate build definition concerns. Thus, provinding a pre-defined and robust build structure upon which multiple developers can work on to build something great!
 
 ### Installation
 
