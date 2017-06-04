@@ -31,7 +31,7 @@ module.exports = {
 	  		{
 				test: /\.css$/,
 				include: helpers.root('src', 'app'),
-				loader: 'raw-loader!postcss-loader'
+				loader: 'raw-loader'
 	  		},
 			{
 				test: /\.scss$/,
@@ -41,7 +41,7 @@ module.exports = {
 			{ 
 				test: /\.scss$/,
 				include: helpers.root('src', 'app'),
-				loaders: ['exports-loader?module.exports.toString()', 'css-loader', 'postcss-loader', 'sass-loader']
+				loaders: ['exports-loader?module.exports.toString()', 'css-loader', 'sass-loader']
 			}
 		]
 	},
