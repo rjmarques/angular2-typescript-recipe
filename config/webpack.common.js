@@ -31,23 +31,23 @@ module.exports = {
 			{
 				test: /\.css$/,
 				exclude: helpers.root('src', 'app'),
-				loader: ExtractTextPlugin.extract({ fallbackLoader: 'style-loader', loader: 'css-loader?sourceMap!postcss-loader' })
+				loader: ExtractTextPlugin.extract({ fallbackLoader: 'style-loader', loader: 'css-loader?sourceMap' })
 				
 			},
 			{
 				test: /\.css$/,
 				include: helpers.root('src', 'app'),
-				loader: 'raw-loader!postcss-loader'
+				loader: 'raw-loader'
 			},
 			{
 				test: /\.scss$/,
 				exclude: helpers.root('src', 'app'),
-				loader: ExtractTextPlugin.extract({ fallbackLoader: 'style-loader', loader: 'css-loader?sourceMap!postcss-loader!resolve-url-loader!sass-loader?sourceMap' })
+				loader: ExtractTextPlugin.extract({ fallbackLoader: 'style-loader', loader: 'css-loader?sourceMap!resolve-url-loader!sass-loader?sourceMap' })
 			},
 			{ 
 				test: /\.scss$/,
 				include: helpers.root('src', 'app'),
-				loader: 'exports-loader?module.exports.toString()!css-loader!postcss-loader!sass-loader'
+				loader: 'exports-loader?module.exports.toString()!css-loader!sass-loader'
 			}
 		]
 	},
