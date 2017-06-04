@@ -1,4 +1,7 @@
 language: node_js
 cache: false
+before_install:
+  - npm cache clean
+  - npm prune
 node_js:
   - "node"
