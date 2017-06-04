@@ -39,7 +39,7 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^2.0.1",
-    "node-sass": "^3.13.1",
+    "node-sass": "^4.5.3",
     "null-loader": "^0.1.1",
     "postcss-loader": "^0.9.1",
     "raw-loader": "^0.5.1",
