@@ -31,7 +31,10 @@ module.exports = {
 			{
 				test: /\.css$/,
 				exclude: helpers.root('src', 'app'),
-				loader: ExtractTextPlugin.extract({ fallbackLoader: 'style-loader', loader: 'css-loader?sourceMap' })
+				use: ExtractTextPlugin.extract({
+					fallback: 'style-loader',
+					use: ['css-loader?sourceMap']
+				})
 				
 			},
 			{
@@ -42,7 +45,10 @@ module.exports = {
 			{
 				test: /\.scss$/,
 				exclude: helpers.root('src', 'app'),
-				loader: ExtractTextPlugin.extract({ fallbackLoader: 'style-loader', loader: 'css-loader?sourceMap!resolve-url-loader!sass-loader?sourceMap' })
+				use: ExtractTextPlugin.extract({
+					fallback: 'style-loader',
+					use: ['css-loader?sourceMap', 'resolve-url-loader', 'sass-loader?sourceMap']
+				})
 			},
 			{ 
 				test: /\.scss$/,
@@ -67,6 +73,8 @@ module.exports = {
 
 		new HtmlWebpackPlugin({
 			template: 'src/index.html'
-		})
+		}),
+
+		new webpack.optimize.ModuleConcatenationPlugin()
 	]
 };
